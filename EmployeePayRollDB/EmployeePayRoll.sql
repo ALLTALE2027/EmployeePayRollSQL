@@ -9,3 +9,6 @@ Create table employee_payroll (
 	Salary float Not null,
 	StartDate Date
 );
+
+-----------UC3-------------
+insert into employee_payroll values('Darshan',10000,'2020-11-13'),('Peter',15000.45,'2015-08-05'),('Tony',50000,GETDATE());

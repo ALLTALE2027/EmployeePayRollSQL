@@ -48,4 +48,7 @@ select count(*) as Gender_Count, Gender from employee_payroll group by Gender;
 -----------UC8---------
 Alter table employee_payroll add PhoneNumber bigint, Address varchar(100) default 'Silicon Valley';
 Alter table employee_payroll add Department varchar(20) Not null default 'IT';
+---------UC9--------
+EXEC sp_rename 'employee_payroll.Salary', 'BasicPay', 'COLUMN';
+Alter table employee_payroll add Deductions float,Taxable_Pay float,Income_Tax float, Net_Pay float;
 

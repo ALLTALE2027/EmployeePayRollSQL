@@ -22,3 +22,26 @@ SELECT * FROM employee_payroll where StartDate between cast ('05-15-2015' as dat
 -----------UC6-------
 alter table employee_payroll add Gender char(1);
 update employee_payroll set Gender = 'M' where Name in('Darshan','Peter','Tony');
+----------UC7---------
+select sum(Salary) as TotalSalary from employee_payroll;
+select avg(Salary) as AvarageSalary from employee_payroll;
+select min(Salary) as MinimumSalary from employee_payroll;
+select max(Salary) as MaximumSalary from employee_payroll;
+select count(Salary) as TotalRecords from employee_payroll;
+select sum(Salary) as TotalSalary, Gender from employee_payroll group by Gender;
+select Avg(Salary) as AvarageSalary,  Gender from employee_payroll group by Gender;
+select min(Salary) as MinimumSalary, Gender from employee_payroll group by Gender;
+select max(Salary) as MaximumSalary, Gender from employee_payroll group by Gender;
+select count(Salary) as TotalRecords, Gender from employee_payroll group by Gender;
+----------UC7---------
+insert into employee_payroll values('Terissa',12345,'2022-09-22','F');
+select sum(Salary) as TotalSalary from employee_payroll;
+select avg(Salary) as AverageSalary from employee_payroll;
+select min(Salary) as MinimumSalary from employee_payroll;
+select max(Salary) as MaximumSalary from employee_payroll;
+select count(*) as TotalRecords from employee_payroll;
+select sum(Salary) as TotalSalary, Gender from employee_payroll group by Gender;
+select Avg(Salary) as AverageSalary,  Gender from employee_payroll group by Gender;
+select min(Salary) as MinimumSalary, Gender from employee_payroll group by Gender;
+select max(Salary) as MaximumSalary, Gender from employee_payroll group by Gender;
+select count(*) as Gender_Count, Gender from employee_payroll group by Gender;

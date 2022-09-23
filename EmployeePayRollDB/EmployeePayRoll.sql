@@ -51,4 +51,7 @@ Alter table employee_payroll add Department varchar(20) Not null default 'IT';
 ---------UC9--------
 EXEC sp_rename 'employee_payroll.Salary', 'BasicPay', 'COLUMN';
 Alter table employee_payroll add Deductions float,Taxable_Pay float,Income_Tax float, Net_Pay float;
-
+----------UC10----------
+update employee_payroll set Department = 'Sales' where Name='Terissa';
+insert into  employee_payroll (Name,BasicPay,StartDate,Gender,PhoneNumber,Address,Department)
+Values('Terissa', 10500.23, '2017-08-17','F',9123456780,'Mumbai','Marketing');
